@@ -1,9 +1,12 @@
+
 import Link from "next/link"
 import logo from "@/assets/logo.png"
 import classes from './header.module.css'
 import Image from "next/image"
 import HeaderBaground from "./header.baground"
+import NavLink from "./nav-link"
 export default function MainHeader(){
+    
     return( 
     <>
     <HeaderBaground/>
@@ -12,14 +15,7 @@ export default function MainHeader(){
         <Image src={logo} alt="A plate of food" priority></Image>
         </Link>
         <nav className={classes.nav}>
-            <ul>
-                <li>
-                    <Link href="/meals">Browse meals</Link>
-                </li>
-                <li>
-                    <Link href="/community">Foodies Community</Link>
-                </li>
-            </ul>
+           <NavLink/> 
         </nav>
     </header>
     </>
