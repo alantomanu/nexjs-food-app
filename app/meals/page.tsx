@@ -1,5 +1,6 @@
 import Link from "next/link"
 import classes from "./page.module.css"
+import MealsGrid from "@/assets/components/meals/meals.grid"
 export default function MealsPage(){
   return(
     <>
