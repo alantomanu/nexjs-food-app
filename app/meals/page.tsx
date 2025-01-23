@@ -11,7 +11,7 @@ export default function MealsPage(){
       <p>
         Choose your favourite recipe & cook yourself, Enjoy!! 
       </p>
-      <p>
+      <p className={classes.cta}>
         <Link href='/meals/share'>
         Share your Favourite Recipe
         </Link>
