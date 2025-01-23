@@ -3,7 +3,7 @@ import classes from "./page.module.css"
 import MealsGrid from "@/assets/components/meals/meals.grid"
 import { getMealsData } from "@/data/meals"
 export default async function MealsPage(){
-  await getMealsData()
+  const meals=await getMealsData()
   return(
     <>
     <header className={classes.header}>
@@ -19,7 +19,7 @@ export default async function MealsPage(){
         </Link>
       </p>
       <main className={classes.main}>
-         <MealsGrid meals={[]}></MealsGrid>
+         <MealsGrid meals={meals}></MealsGrid>
       </main>
     </header>
     </>

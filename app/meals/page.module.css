@@ -1,177 +1,255 @@
 .header {
-    gap: 3rem;
-    margin: 3rem auto 5rem auto;
-    width: 90%;
-    max-width: 75rem;
-    color: #ddd6cb;
-    font-size: 1.5rem;
+  gap: 3rem;
+  margin: 3rem auto 5rem auto;
+  width: 90%;
+  max-width: 75rem;
+  color: #ddd6cb;
+  font-size: 1.5rem;
+}
+
+.header h1 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.highlight {
+  background: linear-gradient(90deg, #f9572a, #ff8a05);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header p {
+  margin: 0;
+}
+
+.cta a {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background: linear-gradient(90deg, #f9572a, #ff9b05);
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.loading {
+  text-align: center;
+  animation: loading 1.2s ease-in-out infinite;
+}
+
+@keyframes loading {
+  0% {
+    color: #e9e9e9;
   }
-  
-  
-  .header h1 {
-    font-family: 'Montserrat', sans-serif;
+  50% {
+    color: #b89b84;
   }
-  
-  
-  .highlight {
-    background: linear-gradient(90deg, #f9572a, #ff8a05);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  100% {
+    color: #e9e9e9;
   }
-  
-  
+}
+
+.not-found,
+.error {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.not-found h1,
+.error h1 {
+  font-size: 5rem;
+  margin: 0px;
+  font-weight: 900;
+  color: #262626;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #f9572a, #ffc905);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: cover;
+  background-position: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.not-found p,
+.error p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #ddd8d8;
+}
+
+.header {
+  gap: 3rem;
+  margin: 3rem auto 5rem auto;
+  width: 90%;
+  max-width: 75rem;
+  color: #ddd6cb;
+  font-size: 1.5rem;
+}
+
+.header h1 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.highlight {
+  background: linear-gradient(90deg, #f9572a, #ff8a05);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.main {
+  width: 90%;
+  max-width: 1200px;
+  margin: 3rem auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.card {
+  background-color: #1c1c1c;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card .content {
+  padding: 1.5rem;
+}
+
+.card h2 {
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.card .creator {
+  color: #888;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.card p {
+  color: #cccccc;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.card .button {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background: linear-gradient(90deg, #f9572a, #ff9b05);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.card .button:hover {
+  background: linear-gradient(90deg, #fd4715, #ffb041);
+}
+
+@media (max-width: 1024px) {
   .main {
-    width: 90%;
-    max-width: 75rem;
-    margin: 3rem auto;
-    color: white;
+    grid-template-columns: repeat(3, 1fr);
   }
-  
-  
-  .form {
-    max-width: 50rem;
+}
+
+@media (max-width: 768px) {
+  .main {
+    grid-template-columns: repeat(2, 1fr);
   }
-  
-  
-  .form label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
-    font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;
-    color: #b3aea5;
-    font-weight: bold;
+}
+
+@media (max-width: 480px) {
+  .main {
+    grid-template-columns: 1fr;
   }
-  
-  
-  .form input,
-  .form textarea {
-    display: block;
-    width: 100%;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    border: 1px solid #454952;
-    background: #1c2027;
-    font-size: 1.25rem;
-    font-family: 'Montserrat', sans-serif;
-    color: #ddd6cb;
-  }
-  
-  
-  .form input:focus,
-  .form textarea:focus {
-    outline-color: #f99f2a;
-    background-color: #1f252d;
-  }
-  
-  
-  .row {
-    display: flex;
-    gap: 1rem;
-  }
-  
-  
-  .row p {
-    width: 100%;
-  }
-  
-  
-  .actions {
-    text-align: right;
-  }
-  
-  
-  .actions button {
-    border: 0;
-    padding: 0.75rem 2rem;
-    background: linear-gradient(90deg, #f9572a, #ff9b05);
-    border: none;
-    color: #ffffff;
-    border-radius: 2px;
-    cursor: pointer;
-    font: inherit;
-    font-size: 1.25rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  }
-  
-  
-  .actions button:hover,
-  .actions button:focus {
-    background: linear-gradient(90deg, #fd4715, #f9b241);
-  }
-  
-  
-  .actions button:disabled,
-  .actions button:hover:disabled,
-  .actions button:focus:disabled {
-    background: #ccc;
-    color: #979797;
-    cursor: not-allowed;
-  }
-  .cta {
-    font-size: 1.5rem;
-    display: flex;
-    gap: 1rem;
-  }
-  
-  .cta a {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
-    background: linear-gradient(90deg, #f9572a, #ff9b05);
-    color: #ffffff;
-    font-weight: bold;
-    text-decoration: none;
-  }
-  
-  .cta a:hover,
-  .cta a:active {
-    background: linear-gradient(90deg, #fd4715, #f9b241);
-  }
-  
-  .cta a:first-child {
-    background: transparent;
-    font-weight: normal;
-    color: #ff9b05;
-    padding-left: 0;
-  }
-  
-  .cta a:first-child:hover,
-  .cta a:first-child:active {
-    background: transparent;
-    color: #f9b241;
-  }
-  .section {
-    display: flex;
-    flex-direction: column;
-    color: #ddd6cb;
-    font-size: 1.5rem;
-    max-width: 50rem;
-    width: 90%;
-    margin: 2rem auto;
-    text-align: center;
-  }
-  .slideshow {
-    width: 40rem;
-    height: 25rem;
-  }
-  
-  .hero {
-    color: #ddd6cb;
-    font-size: 1.5rem;
-  }
-  
-  .hero h1 {
-    font-size: 2rem;
-    font-weight: bold;
-    font-family: 'Montserrat', sans-serif;
-    letter-spacing: 0.15rem;
-    text-transform: uppercase;
-    background: linear-gradient(90deg, #f9572a, #ffc905);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  
+}
+
+.form {
+  max-width: 50rem;
+}
+
+.form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  color: #b3aea5;
+  font-weight: bold;
+}
+
+.form input,
+.form textarea {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  border: 1px solid #454952;
+  background: #1c2027;
+  font-size: 1.25rem;
+  font-family: 'Montserrat', sans-serif;
+  color: #ddd6cb;
+}
+
+.form input:focus,
+.form textarea:focus {
+  outline-color: #f99f2a;
+  background-color: #1f252d;
+}
+
+.row {
+  display: flex;
+  gap: 1rem;
+}
+
+.row p {
+  width: 100%;
+}
+
+.actions {
+  text-align: right;
+}
+
+.actions button {
+  border: 0;
+  padding: 0.75rem 2rem;
+  background: linear-gradient(90deg, #f9572a, #ff9b05);
+  border: none;
+  color: #ffffff;
+  border-radius: 2px;
+  cursor: pointer;
+  font: inherit;
+  font-size: 1.25rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.actions button:hover,
+.actions button:focus {
+  background: linear-gradient(90deg, #fd4715, #f9b241);
+}
+
+.actions button:disabled,
+.actions button:hover:disabled,
+.actions button:focus:disabled {
+  background: #ccc;
+  color: #979797;
+  cursor: not-allowed;
+}
