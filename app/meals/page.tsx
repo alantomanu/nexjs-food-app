@@ -1,7 +1,9 @@
 import Link from "next/link"
 import classes from "./page.module.css"
 import MealsGrid from "@/assets/components/meals/meals.grid"
-export default function MealsPage(){
+import { getMealsData } from "@/data/meals"
+export default async function MealsPage(){
+  await getMealsData()
   return(
     <>
     <header className={classes.header}>
