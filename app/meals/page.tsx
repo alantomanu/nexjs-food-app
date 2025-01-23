@@ -11,17 +11,15 @@ export default async function MealsPage(){
         Tasty meals, created <span className={classes.highlight}>by you</span>
       </h1>
       <p>
-        Choose your favourite recipe & cook yourself, Enjoy!! 
+        Choose your favourite recipe & cook yourself, Enjoy!!
       </p>
       <p className={classes.cta}>
-        <Link href='/meals/share'>
-        Share your Favourite Recipe
+        <Link href="/meals/share">
+          Share your Favourite Recipe
         </Link>
       </p>
-      <main className={classes.main}>
-         <MealsGrid meals={meals}></MealsGrid>
-      </main>
     </header>
-    </>
+    <MealsGrid meals={meals} />
+  </>
   )
 }

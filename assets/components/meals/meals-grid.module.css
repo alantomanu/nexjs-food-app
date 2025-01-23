@@ -1,10 +1,23 @@
 .meals {
-    width: 90%;
-    max-width: 90rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-    grid-gap: 5rem;
-    margin: 2rem auto;
-    list-style: none;
-    padding: 0;
+  width: 90%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Changed to show exactly 3 columns */
+  gap: 2rem;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 1024px) {
+  .meals {
+    grid-template-columns: repeat(2, 1fr);
   }
+}
+
+@media (max-width: 640px) {
+  .meals {
+    grid-template-columns: 1fr;
+  }
+}
